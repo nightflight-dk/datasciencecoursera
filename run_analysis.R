@@ -10,11 +10,11 @@ run_analysis <- function(){
   remove(test)
   remove(train)
   
-  #3/4 Appropriately labels the data set with descriptive variable names. 
+  #3/4 labels the data set with descriptive variable names
   colNames<-as.character(ft[ffilter,2])
   clean<-setNames(clean,colNames)  
   
-  #5
+  #5 creates a new dataset with means for every above feature
   means<-colMeans(clean)
   
   return(means)
